@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 console.log(__dirname);
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 // Static Express to use the CSS files at all times, this gives the /notes path it's formatting!
 app.use(express.static(path.join(__dirname, '/Develop/public')));
