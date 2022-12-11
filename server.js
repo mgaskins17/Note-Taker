@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 console.log(__dirname);
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001; // Need to include process.env.PORT because Heroku can run on any port available - 3001 is for local use only
 
 // Static Express to use the CSS files at all times, this gives the /notes path it's formatting!
 app.use(express.static(path.join(__dirname, '/Develop/public')));
